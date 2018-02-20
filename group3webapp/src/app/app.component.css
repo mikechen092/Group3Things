@@ -1,15 +1,11 @@
-body{
-    background-image: url("../images/candy.jpg");
+div{
     background-repeat: no-repeat center center;
     background-size:100%;
     background-color: black;
     color: white;
     font-size: 20pt;
-    font-family: verdana,arial, sans-serif;
-    
+    font-family: verdana,arial, sans-serif; 
     }
-    a
-    {}
     
     .candyTypesAndDisappointment
     {

@@ -1,5 +1,5 @@
 body{
-    background-image: url("/images/candy.jpg");
+    background-image: url("candy.jpg");
     background-repeat: no-repeat center center;
     background-size:100%;
     background-color: black;
