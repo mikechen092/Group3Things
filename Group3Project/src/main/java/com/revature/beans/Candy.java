@@ -37,5 +37,9 @@ public class Candy {
 	public void setType(String type) {
 		this.type = type;
 	}
+	@Override
+	public String toString() {
+		return "Candy [id=" + id + ", name=" + name + ", type=" + type + "]";
+	}
 	
 }
