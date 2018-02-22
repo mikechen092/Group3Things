@@ -13,7 +13,9 @@
 		<!-- choose whether to create db or update existing db -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- map domain object classes -->
-		<mapping class="com.revature.domain.Flashcard"/>
-		<mapping class="com.revature.domain.Category"/>
+		<mapping class="com.revature.beans.User"/>
+		<mapping class="com.revature.beans.Cooking"/>
+		<mapping class="com.revature.beans.Recipe"/>
+		<mapping class="com.revature.beans.Candy"/>
 	</session-factory>
 </hibernate-configuration>

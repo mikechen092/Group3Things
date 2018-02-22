@@ -2,6 +2,14 @@ package com.revature.beans;
 
 public class User {
 	
+	public User(String username, String password, String firstname, String lastname, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+	}
 	private int id;
 	private String username;
 	private String password;
