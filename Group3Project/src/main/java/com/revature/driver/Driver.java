@@ -7,8 +7,7 @@ import com.revature.dao.UserDaoImpl;
 public class Driver {
 	
 	public static void main(String [] args) {
-		System.out.print("fjdklfd");
-		User user = new User("test","test","test","test","user");
+		User user = new User("username","password","Test","McTester","user@user.user");
 		UserDao ud = new UserDaoImpl();
 		ud.addUser(user);
 	}

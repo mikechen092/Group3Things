@@ -1,5 +1,6 @@
 package com.revature.beans;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,18 +10,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
-public class User {
+@Table(name="USERS")
+public class User implements Serializable{
 	
 	
-	public User(String username, String password, String firstname, String lastname, String email) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = email;
-	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="userSequence")
 	@SequenceGenerator(allocationSize=1,name="userSequence",sequenceName="SQ_USER_PK")
@@ -45,6 +39,16 @@ public class User {
 		this.lastname = lastname;
 		this.email = email;
 	}
+	
+	public User(String username, String password, String firstname, String lastname, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+	}
+	
 	public int getId() {
 		return id;
 	}

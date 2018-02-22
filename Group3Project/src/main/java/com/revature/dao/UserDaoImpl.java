@@ -40,10 +40,11 @@ public class UserDaoImpl implements UserDao {
 		int result = 0;
 		s.persist(user);
 		tx.commit();
-		tx.commit();
 		s.close();
-		return result;
+		return result;		
 	}
+	
+	
 
 	@Override
 	public void deleteUser(User user) {
