@@ -11,6 +11,4 @@ public interface CandyDao {
 	public int addCandy(Candy candy);
 	public void deleteCandy(Candy candy);
 	
-	
-
 }
