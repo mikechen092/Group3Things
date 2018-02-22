@@ -2,7 +2,11 @@ package com.revature.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import com.revature.beans.User;
+import com.revature.util.HibernateUtil;
 
 public class UserDaoImpl implements UserDao {
 
@@ -14,8 +18,13 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public List<User> getUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		Session s = HibernateUtil.getSession();
+		List<User> users = s.createQuery("from User").list();
+		for(User u : users) {
+			System.out.println(u);
+		}
+		s.close();
+		return users;
 	}
 
 	@Override
@@ -26,8 +35,14 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public int addUser(User user) {
-		// TODO Auto-generated method stub
-		return 0;
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		int result = 0;
+		s.persist(user);
+		tx.commit();
+		tx.commit();
+		s.close();
+		return result;
 	}
 
 	@Override
